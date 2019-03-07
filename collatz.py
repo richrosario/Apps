@@ -9,5 +9,10 @@ def collatz(number):
 
 
 n = input("Enter a number: ")
-while n != 1:
-	n = collatz(int(n))
+
+try:
+	while n != 1:
+		n = collatz(int(n))
+except ValueError:
+	print("Enter a number not a letter or word")
+
